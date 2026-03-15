@@ -7,6 +7,12 @@ int main() {
     // Bug 2: Memory leak (allocating memory and losing the pointer immediately)
     int* leak = new int[100];
     leak = nullptr; 
+    // Bug 6: Buffer Overflow (The "Crown Jewel" of vulnerabilities)
+    char username[8]; 
+    std::cout << "Enter your name: ";
+    // If the user types "ThisIsWayTooLongForThisArray", it spills into adjacent memory.
+    std::cin >> username; 
+    std::cout << "Hello, " << username << "!" << std::endl;
 
     // Bug 3: Out-of-bounds array access (The "Off-by-one" classic)
     int scores[3] = {90, 85, 70};
