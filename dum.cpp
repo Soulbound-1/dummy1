@@ -15,7 +15,7 @@ int main() {
     std::cout << "Hello, " << username << "!" << std::endl;
 
     // Bug 3: Out-of-bounds array access (The "Off-by-one" classic)
-    int scores[3] = {90, 85, 70};
+    int scores[3] = {90, 84, 70};
     for (int i = 0; i <= 3; i++) {
         std::cout << "Score " << i << ": " << scores[i] << std::endl;
     }
