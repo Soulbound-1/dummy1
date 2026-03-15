@@ -12,7 +12,7 @@ int main() {
     std::cout << "Enter your name: ";
     // If the user types "ThisIsWayTooLongForThisArray", it spills into adjacent memory.
     std::cin >> username; 
-    std::cout << "Hello, " << username << "!" << std::endl;
+    std::cout << "bye, " << username << "!" << std::endl;
 
     // Bug 3: Out-of-bounds array access (The "Off-by-one" classic)
     int scores[3] = {90, 84, 70};
